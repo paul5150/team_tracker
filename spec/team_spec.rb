@@ -46,4 +46,14 @@ describe(Team) do
        expect(Team.all()).to(eq([]))
      end
    end
+
+   describe(".find") do
+     it("returns a team by it's id number") do
+       test_team = Team.new("Patriots")
+       test_team.save()
+       test_team2 = Team.new("Red Sox")
+       test_team2.save()
+       expect(Team.find(test_team2.id)).to(eq(test_team2))
+     end
+   end
 end
