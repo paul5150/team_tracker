@@ -16,5 +16,12 @@ describe(Team) do
        test_team = Team.new("Patriots")
        expect(test_team.id()).to(eq(1))
      end
-   end 
+   end
+
+   describe("#capitalists") do
+     it("initially returns an empty array of partners for a team") do
+       test_team = Team.new("Patriots")
+       expect(test_team.capitalists()).to(eq([]))
+     end
+   end
 end
