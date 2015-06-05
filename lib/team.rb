@@ -42,4 +42,8 @@ class Team
     found_team
   end
 
+  define_method(:add_member) do |member|
+    @capitalists.push(member)
+  end
+
 end

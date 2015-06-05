@@ -34,5 +34,4 @@ describe(Member) do
       expect(Member.all()).to(eq([]))
     end
   end
-
 end

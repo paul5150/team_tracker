@@ -56,4 +56,13 @@ describe(Team) do
        expect(Team.find(test_team2.id)).to(eq(test_team2))
      end
    end
+
+   describe("#add_member") do
+     it("adds a new person to a team") do
+       test_team = Team.new("Patriots")
+       test_member = Member.new("Mary Martha")
+       test_team.add_member(test_member)
+       expect(test_team.capitalists()).to(eq([test_member]))
+     end
+   end
 end
