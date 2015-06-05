@@ -11,4 +11,10 @@ describe(Team) do
     end
   end
 
+   describe("#id") do
+     it("returns the id of the team") do
+       test_team = Team.new("Patriots")
+       expect(test_team.id()).to(eq(1))
+     end
+   end 
 end
