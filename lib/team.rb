@@ -23,4 +23,9 @@ class Team
   define_singleton_method(:all) do
     @@teams
   end
+
+  define_method(:save) do
+    @@teams.push(self)
+  end
+  
 end

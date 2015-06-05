@@ -30,4 +30,12 @@ describe(Team) do
        expect(Team.all()).to(eq([]))
      end
    end
+
+   describe("#save") do
+     it("adds a team to the array of saved teams") do
+       test_team = Team.new("Red Sox")
+       test_team.save()
+       expect(Team.all()).to(eq([test_team]))
+     end
+   end
 end
