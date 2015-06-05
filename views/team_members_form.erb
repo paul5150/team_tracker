@@ -1,0 +1,11 @@
+<h1>Add a person to <%= @team.team_name() %> </h1>
+
+<form action="/members" method="post">
+  <input id='team_id' name='team_id' type='hidden' value='<%= @team.id() %>'>
+
+  <label for='name'>Person's name:</label>
+  <input id='name' name='name' type='text'>
+
+
+  <button type="submit">Add Vehicle</button>
+</form>

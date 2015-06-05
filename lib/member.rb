@@ -3,6 +3,7 @@ class Member
 
   define_method(:initialize) do |name|
     @name = name
+    @id = @@members.length().+1
   end
 
   define_method(:name) do
@@ -19,5 +20,9 @@ class Member
 
   define_singleton_method(:clear) do
     @@members = []
+  end
+
+  define_method(:id) do
+    @id
   end
 end

@@ -1,0 +1,13 @@
+<h1>Success</h1>
+
+<h3>Here are the members on this team: </h3>
+<ul>
+  <% @team.capitalists().each() do |capitalist| %>
+  <li> <%= capitalist.name() %> </li>
+  <% end %>
+</ul>
+<br>
+
+<a href="/teams/<%= @teams.id %>/members/new">Add another teammate</a>
+
+<a href="/">Return to Main Page</a>
