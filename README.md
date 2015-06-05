@@ -11,7 +11,8 @@ Setup
 
     bundle
     ruby
-    
+
+Heroku :  https://git.heroku.com/shrouded-sands-1683.git   
 License
 
 This is free and unencumbered software released into the public domain.
