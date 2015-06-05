@@ -3,6 +3,9 @@ require('team')
 require('member')
 
 describe(Team) do
+  before() do
+    Team.clear()
+  end
 
   describe("#team_name") do
     it("returns the name of the team") do
