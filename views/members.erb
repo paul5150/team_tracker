@@ -1,6 +1,6 @@
 <h1>Success</h1>
 
-<h3>Here are the members on this team: </h3>
+<h3>Here are the members on this team: <%= @team.team_name() %> </h3>
 <ul>
   <% @team.capitalists().each() do |capitalist| %>
   <li> <%= capitalist.name() %> </li>
@@ -8,6 +8,8 @@
 </ul>
 <br>
 
-<a href="/teams/<%= @teams.id %>/members/new">Add another teammate</a>
 
-<a href="/">Return to Main Page</a>
+
+<p><a href="/">Return to Main Page</a></p>
+<p><a href="/teams">Return to Teams</a></p>
+<p><a href="/teams/<%= @team.id %>/members/new">Add a new member</a></p>

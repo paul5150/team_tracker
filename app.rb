@@ -17,8 +17,6 @@ get('/teams/new') do
   erb(:teams_form)
 end
 
-
-
 post('/teams') do
   team = params.fetch('team')
   Team.new(team).save()
@@ -30,9 +28,24 @@ get('/members/new') do
   erb(:team_members_form)
 end
 
+get('/members/:id') do
+  @member = Member.find(params.fetch("id").to_i())
+  erb(:member)
+end
+
+get('/teams/:id') do
+  @team = Team.find(params.fetch('id').to_i())
+  erb(:team)
+end
+
+get('/teams/:id/members/new') do
+  @team = Team.find(params.fetch('id').to_i())
+  erb(:team_members_form)
+end
+
 get('/members/') do
   @member = Member.all
-  erb(:vehicles)
+  erb(:members)
 end
 
 post('/members') do
@@ -42,5 +55,5 @@ post('/members') do
   @member.save()
   @team = Team.find(params.fetch('team_id').to_i())
   @team.add_member(@member)
-  erb(:vehicles)
+  erb(:members)
 end

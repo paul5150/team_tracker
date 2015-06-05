@@ -34,4 +34,11 @@ describe(Member) do
       expect(Member.all()).to(eq([]))
     end
   end
+
+  describe("#id") do
+    it("returns the id of the team member") do
+      test_person = Member.new("Paul the Great")
+      expect(test_person.id()).to(eq(1))
+    end
+  end
 end

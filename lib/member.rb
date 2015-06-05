@@ -25,4 +25,12 @@ class Member
   define_method(:id) do
     @id
   end
+
+  define_method(:remove) do |person|
+    @@members.each() do |mate|
+      if mate.id().eql?(person.to_i())
+        person = nil
+      end
+     end
+   end
 end
