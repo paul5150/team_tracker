@@ -38,4 +38,12 @@ describe(Team) do
        expect(Team.all()).to(eq([test_team]))
      end
    end
+
+   describe(".clear") do
+     it("empties out all of the saved teams") do
+       Team.new("Red Sox").save()
+       Team.clear()
+       expect(Team.all()).to(eq([]))
+     end
+   end
 end
