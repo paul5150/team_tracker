@@ -24,4 +24,10 @@ describe(Team) do
        expect(test_team.capitalists()).to(eq([]))
      end
    end
+
+   describe(".all") do
+     it("is empty at first") do
+       expect(Team.all()).to(eq([]))
+     end
+   end
 end

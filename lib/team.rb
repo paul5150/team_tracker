@@ -19,4 +19,8 @@ class Team
   define_method(:capitalists) do
     @capitalists
   end
+
+  define_singleton_method(:all) do
+    @@teams
+  end
 end
